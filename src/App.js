@@ -43,7 +43,9 @@ function App() {
 
   function PanTo({marker}) {
     const map = useMap()
-    map.panTo([marker.latitude, marker.longitude])
+    if(marker){
+      map.panTo([marker.latitude, marker.longitude])
+    }
     return null
   }
   return (
